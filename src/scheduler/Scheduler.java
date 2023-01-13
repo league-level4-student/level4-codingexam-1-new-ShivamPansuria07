@@ -1,5 +1,7 @@
 package scheduler;
 
+import java.util.Scanner;
+
 /*
  * Objective: Create a weekly scheduling application.
  * 
@@ -26,6 +28,12 @@ package scheduler;
 public class Scheduler {
 
     public static void main(String[] args) {
-
+    	Scanner scan = new Scanner(System.in);
+    	
+    	// create a enum list
+    	// a way to keep track of times of each input(AL or LL)
+    	//A way to check if the times for each of the events are overlapped as to do with math
+    	
+    	
     }
 }
