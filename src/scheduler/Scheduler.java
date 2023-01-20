@@ -2,6 +2,9 @@ package scheduler;
 
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 /*
  * Objective: Create a weekly scheduling application.
  * 
@@ -27,13 +30,33 @@ import java.util.Scanner;
  */
 public class Scheduler {
 
+	JPanel panel;
+	JFrame frame;
     public static void main(String[] args) {
-    	Scanner scan = new Scanner(System.in);
     	
+    	Scanner scan = new Scanner(System.in);
+    	String str = scan.nextLine();
+    	if(str=="scheduler") {
+    		
+    	}
+    	//String resp
+    	String timePST;
+    	int durationmin;
+    	String name;
     	// create a enum list
     	// a way to keep track of times of each input(AL or LL)
     	//A way to check if the times for each of the events are overlapped as to do with math
     	
     	
     }
+    public void DrawButtons() {
+
+		frame = new JFrame();
+		panel = new JPanel();
+		frame.add(panel);
+
+		frame.setVisible(true);
+		frame.setSize(300, 300);
+		frame.setTitle("Scheduler");
+		}
 }
