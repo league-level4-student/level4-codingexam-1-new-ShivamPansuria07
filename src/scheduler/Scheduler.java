@@ -4,7 +4,10 @@ import java.awt.Component;
 import java.awt.Label;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -44,22 +47,28 @@ Date d = new Date();
 	JLabel label2;
 	JLabel label3;
 	JLabel label4;
+//	- array filled with enums for the days of the week
+//  - enum should contain a LinkedList of events that includes a time and what is happening at the event.
     public static void main(String[] args) {
+
+    	ArrayList<DaysOfTheWeek> EnumArrayList = new ArrayList<DaysOfTheWeek>();
+    	
+    	
     	Scheduler schedule = new Scheduler(); 
     	schedule.DrawGui();
     	
     	System.out.println("Enter your response here:");
     	Scanner scan = new Scanner(System.in);
     	String str = scan.nextLine();
-//    	if() {
-//    		
-//    	}
+    	if(str.contentEquals("add")) {
+    		//System.out.println(someEnumArrayList.get(0));
+    	}
     	
-    	//String resp
+    	String response;
     	String timePST;
     	int durationmin;
     	String name;
-    	// create a enu                          m list
+    	// create a enum list
     	// a way to keep track of times of each input(AL or LL)
     	//A way to check if the times for each of the events are overlapped as to do with math
     	 //
@@ -83,13 +92,14 @@ Date d = new Date();
 		label.setHorizontalAlignment(JTextField.RIGHT);
 		label2.setText("Type 'add' in the console to add an event.");
 		label3.setText("Type 'view' in the console to view an event.");
-		label3.setText("Type 'remove' in the console to remove an event.");
+		label4.setText("Type 'remove' in the console to remove an event.");
 	
 		
-		frame.setSize(300, 300);
+		frame.setSize(300, 400);
 		frame.setTitle("Scheduler");
 		frame.setVisible(true);
 		}
+
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub

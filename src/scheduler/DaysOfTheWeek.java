@@ -2,9 +2,11 @@ package scheduler;
 
 public enum DaysOfTheWeek {
 	SUNDAY,MONDAY,TUESDAY,WEDSDAY,THURSDAY,FRIDAY,SATURDAY;
-	String day; //M,T,W.
 	
-	LinkedList<Scheduler> events = new LinkedList<Scheduler>();
+	DaysOfTheWeek(){
+		//create a constructor here...
+	}
+	LinkedList<String> events = new LinkedList<String>();
 		Scheduler sch = new Scheduler();
-		//im so screwed
+			
 }
