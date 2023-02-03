@@ -112,7 +112,18 @@ public class LinkedList<T> {
     public Node<T> getTail() {
         return tail;
     }
-
+    public boolean contains(T n) {
+    	Node<T> current = head;
+    	while(current != null) {
+    		if(current.getValue() == n) {
+    			return true;
+    		} else {
+    			current = current.getNext();
+    		}
+    	}
+		return false;
+       
+    }
     public void setHead(Node<T> head) {
         this.head = head;
     }

@@ -31,7 +31,6 @@ public class Node<T> {
     public Node<T> getPrev() {
         return this.prev;
     }
-    
     public Node<T> getNext() {
         return this.next;
     }

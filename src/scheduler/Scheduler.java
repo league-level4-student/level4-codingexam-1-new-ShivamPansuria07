@@ -55,15 +55,66 @@ Date d = new Date();
     	
     	
     	Scheduler schedule = new Scheduler(); 
-    	schedule.DrawGui();
     	
+    	schedule.DrawGui();
+    	ArrayList<Integer> list =  new ArrayList<Integer>();
     	System.out.println("Enter your response here:");
     	Scanner scan = new Scanner(System.in);
     	String str = scan.nextLine();
     	if(str.contentEquals("add")) {
-    		//System.out.println(someEnumArrayList.get(0));
-    	}
+    		System.out.println("Enter a day:");
+    		String r = scan.nextLine();
+    		switch(r) {
+    		case "monday": 
+    			System.out.println("Enter a time: ");
+        		String s = scan.nextLine();
+        		if(DaysOfTheWeek.MONDAY.events.contains(Integer.parseInt(s))) {
+        			System.out.println("The time you requested is booked!");
+        	    	list.add(Integer.parseInt(s));
+    		}else {
+    			DaysOfTheWeek.MONDAY.events.add(Integer.parseInt(s));
+    			System.out.println("The time you requested had been booked");
+    		}
+    			break;
+    		
+    		case "tuesday": 
+    			System.out.println("Enter a time: ");
+        		String sr = scan.nextLine();
+        		if(DaysOfTheWeek.TUESDAY.events.contains(Integer.parseInt(sr))) {
+        			System.out.println("The time you requested is booked!");
+    		}else {
+    			DaysOfTheWeek.TUESDAY.events.add(Integer.parseInt(sr));
+    			System.out.println("The time you requested had been booked");
+    		}break;
+    		case "Wedsday": break;
+    		case "Thursday": break;
+    		case "Friday": break;
+    		case "Saturday": break;
+    		}
+    		//d
+    		System.out.println("Enter your response here:");
+    		String res = scan.nextLine();
+    		if(res.equals("view")) {
+    			 for (int i = 0; i < list.size(); i++)
+    		           
     	
+    		            System.out.print(list.get(i) + ", ");       
+    		    }
+    			
+    		}
+    		
+    	}
+//    	 public void iterateUsingWhileLoop(LinkedList<Integer> t ){
+//    		 
+//    	  
+//    	        int i=0;
+//    	        
+//    	        while(i<t.size()){
+//    	            System.out.print(t.get(i));
+//    	            i++;
+//    	        }
+//    	  
+//    	    }
     	String response;
     	String timePST;
     	int durationmin;
@@ -73,7 +124,7 @@ Date d = new Date();
     	//A way to check if the times for each of the events are overlapped as to do with math
     	 //
     	
-    }
+    
     public void DrawGui() {
     	
 
