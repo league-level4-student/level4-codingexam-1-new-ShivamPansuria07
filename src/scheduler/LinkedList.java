@@ -124,6 +124,21 @@ public class LinkedList<T> {
 		return false;
        
     }
+
+public int removeIndex(T n) {
+	Node<T> current = head;
+	int index = 0;
+	while(current != null) {
+		if(current.getValue() == n) {
+			return index;
+		} else {
+			index++;
+			current = current.getNext();
+		}
+	}
+	return index;
+   
+}
     public void setHead(Node<T> head) {
         this.head = head;
     }
